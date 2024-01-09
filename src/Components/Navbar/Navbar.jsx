@@ -2,6 +2,7 @@ import React from "react";
 import { FaSearch } from "react-icons/fa";
 import { FaShoppingCart } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
+import { FaFilter } from "react-icons/fa";
 
 const Navbar = ({
   search,
@@ -39,6 +40,8 @@ const Navbar = ({
           <FaSearch />
         </div>
         <div>
+          <FaFilter className="absolute " />
+
           <select
             onChange={(e) => setFilteredProducts(e.target.value)}
             name="filter"
@@ -46,6 +49,7 @@ const Navbar = ({
             id="filter"
           >
             <option value="">Select</option>
+
             <option value="recommended">Recommended</option>
             <option value="lth">Low to High</option>
             <option value="htl"> High to Low</option>

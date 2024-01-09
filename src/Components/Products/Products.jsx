@@ -13,17 +13,15 @@ const Products = ({ title, description, price, imageUrl, ratings }) => {
           <div className="font-bold text-lg mb-2">{title}</div>
           <p className="text-gray-700 text-base">{description}...</p>
         </div>
-        <div className="h-16 px-6 py-4">
-          <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">
-            ⭐ {ratings}
-          </span>
-          <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-base font-semibold text-gray-700">
+        <div className="h-16 px-2 py-4">
+          <div className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">
+            ⭐{ratings}
+          </div>
+          <div className="inline-block bg-gray-200 rounded-full px-3 py-1 text-base font-semibold text-gray-700">
             $ {price}
-          </span>
-          <button className="mx-1">
-            <span className="inline-block bg-gray-200 rounded-full  px-3 py-1 text-base font-semibold text-gray-700">
-              Add to Cart
-            </span>
+          </div>
+          <button className="mx-1 inline-block bg-gray-200 rounded-full  px-3 py-1 text-base font-semibold text-gray-700">
+            Add to Cart
           </button>
         </div>
       </div>
