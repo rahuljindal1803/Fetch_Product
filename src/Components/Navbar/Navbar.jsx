@@ -48,7 +48,7 @@ const Navbar = ({
             value={filteredProducts}
             id="filter"
           >
-            <option value="">Select</option>
+            <option value="">Select Filter</option>
             <option value="recommended">Recommended</option>
             <option value="lth">Low to High</option>
             <option value="htl"> High to Low</option>

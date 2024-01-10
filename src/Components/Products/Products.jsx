@@ -4,7 +4,15 @@ import { addItem, selectCartItem } from "../../feature/cart/cartSlice";
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 
-const Products = ({ id, title, description, price, imageUrl, ratings }) => {
+const Products = ({
+  id,
+  title,
+  description,
+  price,
+  imageUrl,
+  ratings,
+  quantity,
+}) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -17,7 +25,9 @@ const Products = ({ id, title, description, price, imageUrl, ratings }) => {
   }, [cartItems, id]);
 
   const handleAddToCart = () => {
-    dispatch(addItem({ id, title, description, price, imageUrl, ratings }));
+    dispatch(
+      addItem({ id, title, description, price, imageUrl, ratings, quantity: 1 })
+    );
   };
 
   const handleGoToCart = () => {
@@ -36,7 +46,7 @@ const Products = ({ id, title, description, price, imageUrl, ratings }) => {
           <div className="font-bold text-lg mb-2">{title}</div>
           <p className="text-gray-700 text-base">{description}...</p>
         </div>
-        <div className="h-16 px-6 py-4">
+        <div className="h-16 px-2 flex  py-4">
           <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">
             ⭐ {ratings}
           </span>
@@ -74,6 +84,7 @@ Products.propTypes = {
   price: PropTypes.number,
   ratings: PropTypes.number,
   imageUrl: PropTypes.string,
+  quantity: PropTypes.number,
 };
 
 export default Products;
