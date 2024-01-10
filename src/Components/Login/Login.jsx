@@ -23,11 +23,11 @@ const Login = () => {
       .then((data) => {
         if (data.token) localStorage.setItem("token", data.token);
         navigate("/");
+        setUser({
+          username: "",
+          password: "",
+        });
       });
-    setUser({
-      username: "",
-      password: "",
-    });
   };
 
   return (

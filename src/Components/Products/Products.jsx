@@ -4,15 +4,7 @@ import { addItem, selectCartItem } from "../../feature/cart/cartSlice";
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 
-const Products = ({
-  id,
-  title,
-  description,
-  price,
-  imageUrl,
-  ratings,
-  quantity,
-}) => {
+const Products = ({ id, title, description, price, imageUrl, ratings }) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
