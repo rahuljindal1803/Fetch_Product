@@ -14,7 +14,6 @@ const Home = () => {
       .then((res) => res.json())
       .then((data) => setProduct(data.products))
       .catch((error) => console.error("Error fetching data:", error));
-    console.log(Product);
   }, [filteredProducts]);
 
   const GotoCart = () => {

@@ -22,7 +22,6 @@ const Cart = () => {
   };
 
   const handleRemove = (id) => {
-    console.log("Removing items id", id);
     dispatch(removeItem({ id }));
   };
 
@@ -102,7 +101,6 @@ const Cart = () => {
                     </div>
                   </div>
                 ))}
-                {/* ... other JSX code */}
               </>
             )}
           </div>
